@@ -1,3 +1,4 @@
+import Header from './Components/Header';
 import logo from './logo.svg';
 import './App.css';
 const name = 'Karl'
@@ -8,6 +9,7 @@ const isBool = true
 function App() {
   return (
     <div className="App">
+      <Header title='Hi'></Header>
       <img src={logo} className="App-logo" alt="logo" />
       <h1>Hello World</h1>
       <h2>Hi {name}</h2>
