@@ -1,24 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Button from './Button'
 
+const onClick = (e) => {
+    console.log({e})
+}
 
 const Header = (props) => {
     return (
         <div>
-            <h1>{props.title}</h1>
+            <h1 style={headingStyle}>{props.title}</h1>
+            <Button color='green' name='Add' onClick={onClick}></Button>
+            <Button color='blue' name='Edit'></Button>
+            <Button color='red' name='Delete'></Button>
         </div>
     )
 }
 
-/* Other way to use parameters
+/* Other way to use parameters and style
 const Header = ({title}) => {
     return (
         <div>
-            <h1>Task Tracker {title}</h1>
+            <h1 style={{backgroundColor: red}}>Task Tracker {title}</h1>
         </div>
     )
 }
 */
+
+//style sheets as a constant
+const headingStyle = {
+    color: 'red',
+    backgroundColor: 'gray'
+}
 
 //If no parameters were passed, these are the default values
 Header.defaultProps = {

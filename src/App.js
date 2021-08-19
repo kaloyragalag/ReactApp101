@@ -9,7 +9,7 @@ const isBool = true
 function App() {
   return (
     <div className="App">
-      <Header title='Hi'></Header>
+      <Header title='Task Tracker'></Header>
       <img src={logo} className="App-logo" alt="logo" />
       <h1>Hello World</h1>
       <h2>Hi {name}</h2>

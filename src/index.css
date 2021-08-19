@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.btn{
+  --display: inline-block;
+  color:white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:focus{
+  --outline: none;
+}
+
+.btn:active{
+  --display: block;
+  --width: 100%;
+}
