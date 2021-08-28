@@ -6,3 +6,8 @@ https://www.youtube.com/watch?v=w7ejDZ8SWv8
 3. Install extension for shortcuts: ES7 React/Redux/GraphQL/React-Native snippets
 	rafce - import one of the default components
 	impt - import proptypes
+4. useState - need to reference: import { useState } from 'react';
+	- used for arrays
+5. install icons
+	npm i react-icons //i stands for install
+	import {FaTimes} from 'react-icons/fa' --for fontawesome

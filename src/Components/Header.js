@@ -8,12 +8,12 @@ const onClick = (e) => {
 
 const Header = (props) => {
     return (
-        <div>
+        <header className='header'>
             <h1 style={headingStyle}>{props.title}</h1>
             <Button color='green' name='Add' onClick={onClick}></Button>
-            <Button color='blue' name='Edit'></Button>
-            <Button color='red' name='Delete'></Button>
-        </div>
+            {/* <Button color='blue' name='Edit'></Button>
+            <Button color='red' name='Delete'></Button> */}
+        </header>
     )
 }
 
@@ -29,8 +29,8 @@ const Header = ({title}) => {
 
 //style sheets as a constant
 const headingStyle = {
-    color: 'red',
-    backgroundColor: 'gray'
+    color: 'black',
+    // backgroundColor: 'gray'
 }
 
 //If no parameters were passed, these are the default values
