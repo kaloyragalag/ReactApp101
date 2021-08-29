@@ -2,15 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Button from './Button'
 
-const onClick = (e) => {
-    console.log({e})
-}
 
 const Header = (props) => {
+
+    const onClick = () => {
+        props.toggleAddTask(!props.showAddTask);
+    }
+    
     return (
         <header className='header'>
             <h1 style={headingStyle}>{props.title}</h1>
-            <Button color='green' name='Add' onClick={onClick}></Button>
+            <Button color={props.showAddTask ? 'red' : 'green'} name={props.showAddTask ? 'Close' : 'Add Task'} onClick={onClick}></Button>
             {/* <Button color='blue' name='Edit'></Button>
             <Button color='red' name='Delete'></Button> */}
         </header>

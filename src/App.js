@@ -10,6 +10,7 @@ import AddTask from './Components/AddTask';
 
 
 function App() {
+  const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([
       {
         id:1,
@@ -37,6 +38,10 @@ function App() {
     setTasks([...tasks, newTask]);
   }
 
+  const toggleAddTask = (state) => {
+    setShowAddTask(state);
+  }
+
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id))
   }
@@ -47,8 +52,8 @@ function App() {
 
   return (
     <div className="container">
-      <Header title='Task Tracker'></Header>
-      <AddTask addTask={addTask}></AddTask>
+      <Header title='Task Tracker' showAddTask={showAddTask} toggleAddTask={toggleAddTask} ></Header>
+      {showAddTask && <AddTask addTask={addTask}></AddTask>}
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggleReminder={toggleReminder}></Tasks> : 'No Tasks!'}
       {/* <img src={logo} className="App-logo" alt="logo" />
       <h1>Hello World</h1>
