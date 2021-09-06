@@ -7,7 +7,17 @@ https://www.youtube.com/watch?v=w7ejDZ8SWv8
 	rafce - import one of the default components
 	impt - import proptypes
 4. useState - need to reference: import { useState } from 'react';
-	- used for arrays
+	- used for assigning values to datatypes like array, string, bool, number
 5. install icons
 	npm i react-icons //i stands for install
 	import {FaTimes} from 'react-icons/fa' --for fontawesome
+6. to build prod
+	npm run build //create a build folder
+	npm i -g serve //to install the serve
+	serve -s build -p 8000 //to build in port 8000
+7. json server //mock api
+	https://github.com/typicode/json-server
+	npm i json-server //install locally
+	in package.json, add the "server" in scripts parent
+		//this will create a db.json file at port 5000
+	npm run server
