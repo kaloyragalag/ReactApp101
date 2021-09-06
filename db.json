@@ -13,16 +13,10 @@
       "reminder": true
     },
     {
-      "text": "This is an added task",
-      "day": "Yesterday",
-      "reminder": false,
+      "text": "Test",
+      "day": "Test",
+      "reminder": true,
       "id": 3
-    },
-    {
-      "text": "Task after task",
-      "day": "Monday",
-      "reminder": false,
-      "id": 4
     }
   ]
 }
