@@ -1,20 +1,16 @@
 {
   "tasks": [
-      {
-        "id":1,
-        "text": "This is the 1st task",
-        "day": "Today",
-        "reminder": true
-      },{
-        "id":2,
-        "text": "This is the 2nd task",
-        "day": "Tomorrow",
-        "reminder": true
-      },{
-        "id":3,
-        "text": "This is the last task",
-        "day": "Yesterday",
-        "reminder": true
-      }
-    ]
+    {
+      "id": 1,
+      "text": "This is the 1st task",
+      "day": "Today",
+      "reminder": true
+    },
+    {
+      "id": 2,
+      "text": "This is the 2nd task",
+      "day": "Tomorrow",
+      "reminder": true
+    }
+  ]
 }

@@ -21,3 +21,5 @@ https://www.youtube.com/watch?v=w7ejDZ8SWv8
 	in package.json, add the "server" in scripts parent
 		//this will create a db.json file at port 5000
 	npm run server
+8. import { useEffect } from 'react' //want something to happen when the page loads
+	useEffect(() => {}) //function to use
