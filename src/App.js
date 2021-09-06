@@ -29,11 +29,22 @@ function App() {
     return data;
   }
 
-  const addTask = (task) => {
+  const addTask = async(task) => {
+    /*
     const id = tasks.length + 1;
     const newTask = {id, ...task};
-    console.log(newTask);
-    setTasks([...tasks, newTask]);
+    console.log(newTask);*/
+    const result = await fetch('http://localhost:5000/tasks/', 
+    {
+      method: 'POST'
+      , headers:{
+        'Content-type': 'application/json'
+      }
+      , body: JSON.stringify(task)
+    });
+    const data = await result.json();
+
+    setTasks([...tasks, data]);    
   }
 
   const toggleAddTask = (state) => {

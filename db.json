@@ -11,6 +11,18 @@
       "text": "This is the 2nd task",
       "day": "Tomorrow",
       "reminder": true
+    },
+    {
+      "text": "This is an added task",
+      "day": "Yesterday",
+      "reminder": false,
+      "id": 3
+    },
+    {
+      "text": "Task after task",
+      "day": "Monday",
+      "reminder": false,
+      "id": 4
     }
   ]
 }
