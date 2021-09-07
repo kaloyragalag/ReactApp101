@@ -23,3 +23,15 @@ https://www.youtube.com/watch?v=w7ejDZ8SWv8
 	npm run server
 8. import { useEffect } from 'react' //want something to happen when the page loads
 	useEffect(() => {}) //function to use
+9. npm i react-router-dom //install router
+	this will be added in the package.json
+		"react-router-dom"
+	import {BrowserRouter, Route} from 'react-router-dom'
+	to use Route functionality, needs to be wraped in <BrowserRouter/> all the html tags
+10. to not load the page, do not use A HREF, but instead:
+	import { Link } from 'react-router-dom'
+	<Link to='/'></Link>
+11. import { useLocation } from 'react-router-dom'
+	//look at the route that are currently on
+	const location = useLocation();
+	location.pathname //to check the current path

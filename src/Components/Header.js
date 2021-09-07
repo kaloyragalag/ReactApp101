@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Button from './Button'
+import { useLocation } from 'react-router-dom'
 
 
 const Header = (props) => {
+    const location = useLocation();
 
     const onClick = () => {
         props.toggleAddTask(!props.showAddTask);
@@ -12,7 +14,7 @@ const Header = (props) => {
     return (
         <header className='header'>
             <h1 style={headingStyle}>{props.title}</h1>
-            <Button color={props.showAddTask ? 'red' : 'green'} name={props.showAddTask ? 'Close' : 'Add Task'} onClick={onClick}></Button>
+            {location.pathname === '/' && <Button color={props.showAddTask ? 'red' : 'green'} name={props.showAddTask ? 'Close' : 'Add Task'} onClick={onClick}></Button>}
             {/* <Button color='blue' name='Edit'></Button>
             <Button color='red' name='Delete'></Button> */}
         </header>

@@ -3,6 +3,9 @@ import './App.css';
 import Tasks from './Components/Tasks';
 import { useState, useEffect } from 'react';
 import AddTask from './Components/AddTask';
+import Footer from './Components/Footer';
+import About from './Components/About';
+import {BrowserRouter, Route} from 'react-router-dom'
 //import logo from './logo.svg';
 // const name = 'Karl'
 // const num = 1
@@ -80,16 +83,26 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <Header title='Task Tracker' showAddTask={showAddTask} toggleAddTask={toggleAddTask} ></Header>
-      {showAddTask && <AddTask addTask={addTask}></AddTask>}
-      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggleReminder={toggleReminder}></Tasks> : 'No Tasks!'}
-      {/* <img src={logo} className="App-logo" alt="logo" />
-      <h1>Hello World</h1>
-      <h2>Hi {name}</h2>
-      <h2>Number {num}</h2>      
-      <h2>Condition {isBool ? 'Yes' : 'False' }</h2> */}
-    </div>//Only 1 Parent, all elements must be inside the parent
+    <BrowserRouter>
+      <div className="container">
+        <Header title='Task Tracker' showAddTask={showAddTask} toggleAddTask={toggleAddTask} />
+        
+        <Route path='/' exact render={(props) => (
+          <>
+            {showAddTask && <AddTask addTask={addTask} />}
+            {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggleReminder={toggleReminder} /> : 'No Tasks!'}
+          </>
+        )} />
+        <Route path='/about' component={About} />
+        <Footer/>
+        {/* <img src={logo} className="App-logo" alt="logo" />
+        <h1>Hello World</h1>
+        <h2>Hi {name}</h2>
+        <h2>Number {num}</h2>      
+        <h2>Condition {isBool ? 'Yes' : 'False' }</h2> */}
+      </div>
+      {/* //Only 1 Parent, all elements must be inside the parent */}
+    </BrowserRouter>
   );
 }
 
