@@ -18,5 +18,32 @@
       "reminder": false,
       "id": 3
     }
+  ],
+  "expenses": [
+    {
+      "id": 1,
+      "text": "Cash",
+      "amount": 500
+    },
+    {
+      "id": 2,
+      "text": "Book",
+      "amount": -40
+    },
+    {
+      "id": 3,
+      "text": "Camera",
+      "amount": -200
+    },
+    {
+      "text": "Test",
+      "amount": 50,
+      "id": 4
+    },
+    {
+      "text": "Again",
+      "amount": -50,
+      "id": 5
+    }
   ]
 }

@@ -4,7 +4,7 @@ import AddTask from './AddTask';
 import Footer from './Footer';
 import About from './About';
 
-import './AppTask.css';
+import './AppTaskTracker.css';
 
 import { useState, useEffect } from 'react';
 import {BrowserRouter, Route} from 'react-router-dom'
@@ -14,7 +14,7 @@ import {BrowserRouter, Route} from 'react-router-dom'
 // const isBool = true
 
 
-function AppTaskMain() {
+function AppTaskTracker() {
   const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([]);
 
@@ -108,4 +108,4 @@ function AppTaskMain() {
   );
 }
 
-export default AppTaskMain;
+export default AppTaskTracker;

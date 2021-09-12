@@ -1,11 +1,11 @@
 import './App.css';
-import AppTaskMain from './Components/AppTask/AppTaskMain';
+import AppExpenseTracker from './Components/ExpenseTracker/AppExpenseTracker';
 
 function App() {
 
   return (
     <div>
-      <AppTaskMain/>
+      <AppExpenseTracker/>
     </div>
   );
 }
