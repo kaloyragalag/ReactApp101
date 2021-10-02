@@ -35,5 +35,12 @@ https://www.youtube.com/watch?v=w7ejDZ8SWv8
 	//look at the route that are currently on
 	const location = useLocation();
 	location.pathname //to check the current path
+12. to install material ui components --somewhat lik bootstrap
+	npm install @mui/material
+13. To run the client and server at the same time, see package.json under scripts
+	--but before that, install first concurrently in react project
+		npm i -D concurrently
+	a. created a script, for this name, set it to dev, this can be any name
+	to run the dev script: npm run dev
 
 https://youtu.be/XuFDcZABiDQ?list=PLillGF-RfqbY3c2r0htQyVbDJJoBFE6Rb
