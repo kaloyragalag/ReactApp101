@@ -21,28 +21,23 @@
   ],
   "expenses": [
     {
-      "id": 1,
-      "text": "Cash",
-      "amount": 500
+      "text": "Expense Item",
+      "amount": -50,
+      "id": 2
     },
     {
-      "id": 2,
-      "text": "Book",
-      "amount": -40
+      "text": "Income Item",
+      "amount": 1,
+      "id": 3
     },
     {
-      "id": 3,
-      "text": "Camera",
-      "amount": -200
-    },
-    {
-      "text": "Test",
-      "amount": 50,
+      "text": "Added",
+      "amount": 10.5,
       "id": 4
     },
     {
-      "text": "Again",
-      "amount": -50,
+      "text": "New Item",
+      "amount": 456,
       "id": 5
     }
   ]
