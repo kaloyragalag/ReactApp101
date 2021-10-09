@@ -37,10 +37,17 @@ https://www.youtube.com/watch?v=w7ejDZ8SWv8
 	location.pathname //to check the current path
 12. to install material ui components --somewhat lik bootstrap
 	npm install @mui/material
+	https://mui.com/
+	https://mui.com/components/material-icons/
 13. To run the client and server at the same time, see package.json under scripts
 	--but before that, install first concurrently in react project
 		npm i -D concurrently
 	a. created a script, for this name, set it to dev, this can be any name
 	to run the dev script: npm run dev
-
+14. Install react admin
+	npm i react-admin ra-data-simple-rest
+	https://marmelab.com/react-admin/
+15. middleware for reac admin
+	since it will need a total count for the api, and we're just using json-server for the API it doesn't have a header
+	to implement: add in the script in package.json: --middleware <filename>
 https://youtu.be/XuFDcZABiDQ?list=PLillGF-RfqbY3c2r0htQyVbDJJoBFE6Rb
