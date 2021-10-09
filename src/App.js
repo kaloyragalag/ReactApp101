@@ -1,19 +1,25 @@
+/* For Material UI
 import { AppBar, Button, Container, Toolbar, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import React from 'react';
-import './App.css';
 import AppExpenseTracker from './Components/ExpenseTracker/AppExpenseTracker';
 import PropTypes from 'prop-types';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
+*/
+import React from 'react';
+import './App.css';
+import { Admin, Resource } from 'react-admin';
+import restProvider from 'ra-data-simple-rest';
+import Dashboard from './Components/AppAdmin/Dashboard';
+import NotFound from './Components/AppAdmin/NotFound';
+import { MemberList, MemberCreate, MemberEdit, MemberIcon } from './Components/AppAdmin/MemberAdmin';
 
 
 function App(props) {
+  /*
   ElevationScroll.propTypes = {
-    children: PropTypes.element.isRequired,
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
+    children: PropTypes.element.isRequired,    
+     // Injected by the documentation to work in an iframe.
+     // You won't need it on your project.     
     window: PropTypes.func,
   };
 
@@ -32,8 +38,9 @@ function App(props) {
       elevation: trigger ? 4 : 0,
     });
   }
-
+*/
   return (
+    /* Using Material UI
 <React.Fragment>
   <ElevationScroll {...props}>
     <AppBar position="fixed">
@@ -46,11 +53,15 @@ function App(props) {
   <Toolbar/>
   <Container>
     <Box>
-      {/* <AppTaskTracker/> */}
       <AppExpenseTracker/>
     </Box>
   </Container>
 </React.Fragment>
+*/
+  <Admin dataProvider={restProvider('http://localhost:5000')} dashboard={Dashboard} catchAll={NotFound} >
+    <Resource name='members' list={MemberList} create={MemberCreate} edit={MemberEdit} icon={MemberIcon}  />
+    <Resource  />
+  </Admin>
   );
 }
 
